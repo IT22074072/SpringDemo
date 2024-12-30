@@ -1,5 +1,8 @@
 package org.example;
 
+import org.springframework.stereotype.Component;
+
+@Component //you are used by spring
 public class Alien {
 
     private int age;
