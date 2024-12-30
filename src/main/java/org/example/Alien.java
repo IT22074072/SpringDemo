@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 public class Alien {
 
     private int age;
-    @Autowired
-    @Qualifier("com1") //default starts with simple letter of the class or name a bean
+
+    //@Qualifier("com1") //default starts with simple letter of the class or name a bean
     private Computer com;
 
     public Alien(){
@@ -35,6 +35,8 @@ public class Alien {
         return com;
     }
 
+    @Autowired
+    @Qualifier("com2") //Qualifier gets ahead of laptop
     public void setCom(Computer com) {
         this.com = com;
     }
