@@ -3,16 +3,16 @@ package org.example;
 public class Alien {
 
     private int age;
-    private Laptop lap;
+    private Computer com;
 
     public Alien(){
         System.out.println("Alien object created");
     }
 
-    public Alien(int age, Laptop lap){
+    public Alien(int age, Computer com){
         System.out.println("Parameterized Alien constructor called");
         this.age = age;
-        this.lap = lap;
+        this.com = com;
     }
 
     public int getAge() {
@@ -24,16 +24,16 @@ public class Alien {
         this.age = age;
     }
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getLap() {
+        return com;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setLap(Computer com) {
+        this.com = com;
     }
 
     public void code(){
         System.out.println("coding");
-        lap.compile();
+        com.compile();
     }
 }
