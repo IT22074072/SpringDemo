@@ -4,11 +4,9 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-<bean id="alien1" class="org.example.Alien">
-</bean>
+<bean id="alien" class="org.example.Alien" scope="prototype">  <!--only one object creates by Alien class bcz we have mention one time- but there is a thing called scope(if singleton same as no scope-it will be created when the container loads)-->
+</bean>                                                        <!--prototype-can create any num of objects - only be created when call getBean -->
 
-    <bean id="alien2" class="org.example.Alien">
-    </bean>
     <bean id="lap" class="org.example.Laptop">
     </bean>
 
