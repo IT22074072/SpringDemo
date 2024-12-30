@@ -9,8 +9,10 @@
     </bean>-->     <!--prototype-can create any num of objects - only be created when call getBean -->
 
     <bean id="alien" class="org.example.Alien" >
-        <constructor-arg value="1"/>
-        <property name="lap" ref="lap1"/>
+        <constructor-arg index="0" value="1"/>   <!--spring checking the sequence of attributes - so we use index-->
+        <constructor-arg index="1" ref="lap1"/>
+        <!--<property name="lap" ref="lap1"/>-->
+
     </bean>
 
     <bean id="lap1" class="org.example.Laptop">

@@ -9,9 +9,10 @@ public class Alien {
         System.out.println("Alien object created");
     }
 
-    public Alien(int age){
-        System.out.println("Parameterized constructor called");
+    public Alien(int age, Laptop lap){
+        System.out.println("Parameterized Alien constructor called");
         this.age = age;
+        this.lap = lap;
     }
 
     public int getAge() {
