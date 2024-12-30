@@ -13,8 +13,14 @@ public class App
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         Alien obj1 = context.getBean(Alien.class); //in this line just getting the object
-        System.out.println(obj1.getAge());
+        System.out.println(obj1.getAge()); //age with 1
         obj1.code();
+
+
+        Alien obj2 = context.getBean(Alien.class); //in this line just getting the object
+        obj2.setAge(21);
+        System.out.println(obj2.getAge());  //age with 21 - two different objects from earlier
+        System.out.println(obj1.getAge());
 
 
 //        Desktop dt = context.getBean("desktop",Desktop.class);
