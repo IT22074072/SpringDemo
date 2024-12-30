@@ -11,20 +11,17 @@
     <bean id="alien" class="org.example.Alien">
 
         <property name="age" value="1"/>
-        <property name="com">
-            <bean id="com" class="org.example.Desktop" lazy-init="true"> <!--only we want to create it, it will be created-->
-            </bean>   <!--inner bean-->
-        </property><!--explicit-->
+        <property name="com" ref="com"/> <!--explicit-->
 
         <!--<constructor-arg index="0" value="1"/>  --> <!--spring checking the sequence of attributes - so we use index-->
         <!--<constructor-arg index="1" ref="lap1"/>-->
-
 
     </bean>
 
     <bean id="com1" class="org.example.Laptop" primary="true">
     </bean>
 
-
+    <bean id="com" class="org.example.Desktop" lazy-init="true"> <!--only we want to create it, it will be created-->
+     </bean>
 
     </beans>
