@@ -9,8 +9,8 @@
     </bean>-->     <!--prototype-can create any num of objects - only be created when call getBean -->
 
     <bean id="alien" class="org.example.Alien" >
-        <property name="age" value="1"></property>  <!--setter called-->
-        <property name="lap" ref="lap1"></property>
+        <constructor-arg value="1"/>
+        <property name="lap" ref="lap1"/>
     </bean>
 
     <bean id="lap1" class="org.example.Laptop">
