@@ -16,6 +16,8 @@ public class App
         dt.compile();
 
 
+        Desktop dt1 = context.getBean("desktop",Desktop.class);
+        dt1.compile();
 
 
 
