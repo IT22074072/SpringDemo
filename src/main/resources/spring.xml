@@ -8,10 +8,10 @@
     <bean id="alien" class="org.example.Alien" scope="prototype">
     </bean>-->     <!--prototype-can create any num of objects - only be created when call getBean -->
 
-    <bean id="alien" class="org.example.Alien" autowire="byName" >
+    <bean id="alien" class="org.example.Alien">
 
         <property name="age" value="1"/>
-        <property name="com" ref="com1"/>
+        <property name="com" ref="com1"/> <!--explicit-->
 
         <!--<constructor-arg index="0" value="1"/>  --> <!--spring checking the sequence of attributes - so we use index-->
         <!--<constructor-arg index="1" ref="lap1"/>-->
@@ -19,7 +19,7 @@
 
     </bean>
 
-    <bean id="com1" class="org.example.Laptop">
+    <bean id="com1" class="org.example.Laptop" primary="true">
     </bean>
 
     <bean id="com" class="org.example.Desktop">
