@@ -10,9 +10,10 @@
 
     <bean id="alien" class="org.example.Alien" >
         <property name="age" value="1"></property>  <!--setter called-->
+        <property name="lap" ref="lap1"></property>
     </bean>
 
-    <bean id="lap" class="org.example.Laptop">
+    <bean id="lap1" class="org.example.Laptop">
     </bean>
 
     </beans>
