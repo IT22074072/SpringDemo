@@ -1,11 +1,15 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component //you are used by spring
 public class Alien {
 
     private int age;
+    @Autowired
+    @Qualifier("com1") //default starts with simple letter of the class or name a bean
     private Computer com;
 
     public Alien(){
