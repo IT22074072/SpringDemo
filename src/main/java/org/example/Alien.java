@@ -2,11 +2,15 @@ package org.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component //you are used by spring
+@Scope("prototype")
 public class Alien {
 
+    @Value("1")
     private int age;
 
     //@Qualifier("com1") //default starts with simple letter of the class or name a bean
